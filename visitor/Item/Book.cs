@@ -2,7 +2,7 @@
 
 namespace Visitor.Item
 {
-    public class Book : IItem
+    public class Book : IPostable
     {
         public Book(double weight)
         {

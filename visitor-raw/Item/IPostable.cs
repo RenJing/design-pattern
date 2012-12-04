@@ -1,7 +1,7 @@
 
 namespace VisitorRaw.Item
 {
-    public interface IItem
+    public interface IPostable
     {
         double Postage();
     }

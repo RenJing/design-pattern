@@ -13,7 +13,7 @@ namespace Visitor
             this.visitor = visitor;
         }
 
-        public double GetPostage(IList<IItem> items)
+        public double GetPostage(IList<IPostable> items)
         {
             return items.Sum(i => i.Accept(visitor));
         }

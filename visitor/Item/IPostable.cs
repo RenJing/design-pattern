@@ -2,8 +2,9 @@ using Visitor.PostageVisitor;
 
 namespace Visitor.Item
 {
-    public interface IItem
+    public interface IPostable
     {
+        double Weight { get; }
         double Accept(IPostageVisitor visitor);
     }
 }

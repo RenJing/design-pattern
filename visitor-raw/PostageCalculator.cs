@@ -6,7 +6,7 @@ namespace VisitorRaw
 {
     public class PostageCalculator
     {
-        public double GetPostage(IList<IItem> items)
+        public double GetPostage(IList<IPostable> items)
         {
             return items.Sum(i => i.Postage());
         }

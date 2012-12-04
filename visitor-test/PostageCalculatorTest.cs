@@ -10,15 +10,27 @@ namespace visitor_test
     public class PostageCalculatorTest
     {
         [TestMethod]
-        public void should_get_postage()
+        public void should_get_postage_for_shunfeng()
         {
-            var items = new List<IItem>
+            var items = new List<IPostable>
                             {
                                 new Book(2), new Food(4)
                             };
             var calculator = new PostageCalculator(new ShunFengPostageVisitor());
             var actualPostage = calculator.GetPostage(items);
             Assert.AreEqual(22, actualPostage);
+        }
+
+        [TestMethod]
+        public void should_get_postage_for_zhongtong()
+        {
+            var items = new List<IPostable>
+                            {
+                                new Book(2), new Food(4), new Oven(2, 5)
+                            };
+            var calculator = new PostageCalculator(new ZhongTongPostageVisitor());
+            var actualPostage = calculator.GetPostage(items);
+            Assert.AreEqual(50, actualPostage);
         }
     }
 }

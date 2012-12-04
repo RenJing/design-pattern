@@ -1,6 +1,6 @@
 ﻿namespace VisitorRaw.Item
 {
-    public class Food : IItem
+    public class Food : IPostable
     {
         public double Weight { get; private set; }
 

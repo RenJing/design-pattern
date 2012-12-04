@@ -6,18 +6,22 @@ namespace Visitor.PostageVisitor
     {
         public double Visit(Book book)
         {
-            return 0;
+            return GetPostage(book);
         }
 
         public double Visit(Oven oven)
         {
-            return 0;
+            return GetPostage(oven);
         }
 
         public double Visit(Food food)
         {
-            return 0;
+            return GetPostage(food);
         }
 
+        private static double GetPostage<T>(T item) where T:IPostable
+        {
+            return item.Weight <= 5 ? 10 : 10 + (item.Weight - 5)*4;
+        }
     }
 }

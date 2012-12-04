@@ -43,7 +43,7 @@
     <Compile Include="Item\Book.cs" />
     <Compile Include="Item\Oven.cs" />
     <Compile Include="Item\Food.cs" />
-    <Compile Include="Item\IItem.cs" />
+    <Compile Include="Item\IPostable.cs" />
     <Compile Include="PostageCalculator.cs" />
     <Compile Include="PostageVisitor\ShunFengPostageVisitor.cs" />
     <Compile Include="PostageVisitor\IPostageVisitor.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace VisitorRaw.Item
 {
-    public class Oven : IItem
+    public class Oven : IPostable
     {
         public double Count { get; private set; }
 
