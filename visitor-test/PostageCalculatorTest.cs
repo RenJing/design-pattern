@@ -10,7 +10,7 @@ namespace visitor_test
     public class PostageCalculatorTest
     {
         [TestMethod]
-        public void should_get_postage()
+        public void should_get_shunfeng_postage()
         {
             var items = new List<IItem>
                             {

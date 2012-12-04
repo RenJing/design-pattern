@@ -2,9 +2,9 @@
 {
     public class Oven : IItem
     {
-        public double Count { get; private set; }
+        public int Count { get; private set; }
 
-        public Oven(double count)
+        public Oven(int count)
         {
             Count = count;
         }
