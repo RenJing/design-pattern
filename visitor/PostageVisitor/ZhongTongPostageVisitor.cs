@@ -4,6 +4,9 @@ namespace Visitor.PostageVisitor
 {
     public class ZhongTongPostageVisitor : IPostageVisitor
     {
+        private const int MIN_WEIGHT = 5;
+        private const int MIN_POSTAGE = 10;
+
         public double Visit(Book book)
         {
             return GetPostage(book);
@@ -21,7 +24,7 @@ namespace Visitor.PostageVisitor
 
         private static double GetPostage<T>(T item) where T:IPostable
         {
-            return item.Weight <= 5 ? 10 : 10 + (item.Weight - 5)*4;
+            return item.Weight <= MIN_WEIGHT ? MIN_POSTAGE : MIN_POSTAGE + (item.Weight - MIN_WEIGHT)*4;
         }
     }
 }
