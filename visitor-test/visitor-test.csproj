@@ -45,8 +45,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ZhongTongPostageVisitorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PostageCalculatorTest.cs" />
+    <Compile Include="ShunFengPostageVisitorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\visitor\visitor.csproj">
