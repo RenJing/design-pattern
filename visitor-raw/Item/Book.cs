@@ -2,7 +2,7 @@
 {
     public class Book : IPostable
     {
-        public double Weight { get; private set; }
+        private double Weight { get; set; }
 
         public Book(double weight)
         {

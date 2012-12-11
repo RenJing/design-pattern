@@ -2,7 +2,7 @@
 {
     public class Oven : IPostable
     {
-        public int Count { get; private set; }
+        private int Count { get; set; }
 
         public Oven(int count)
         {

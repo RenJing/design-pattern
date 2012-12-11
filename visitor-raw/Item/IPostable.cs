@@ -1,4 +1,3 @@
-
 namespace VisitorRaw.Item
 {
     public interface IPostable

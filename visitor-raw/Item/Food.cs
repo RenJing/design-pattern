@@ -2,7 +2,7 @@
 {
     public class Food : IPostable
     {
-        public double Weight { get; private set; }
+        private double Weight { get; set; }
 
         public Food(double weight)
         {
