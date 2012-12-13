@@ -45,6 +45,7 @@
     <Compile Include="Item\Food.cs" />
     <Compile Include="Item\IPostable.cs" />
     <Compile Include="PostageCalculator.cs" />
+    <Compile Include="PostageVisitor\BusySeasonCalculator.cs" />
     <Compile Include="PostageVisitor\ShunFengCalculator.cs" />
     <Compile Include="PostageVisitor\IPostageCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
