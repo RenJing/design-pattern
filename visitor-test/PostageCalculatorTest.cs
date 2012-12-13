@@ -43,5 +43,16 @@ namespace visitor_test
             var calculator = new PostageCalculator(new BusySeasonCalculator(new ZhongTongCalculator()));
             Assert.AreEqual(10*1.15, calculator.GetPostage(items), 0.001);
         }
+        
+        [TestMethod]
+        public void should_SF_increase_postage_for_book_by_15_percent_in_busy_seaon()
+        {
+            var items = new List<IPostable>
+                            {
+                                new Book(2)
+                            };
+            var calculator = new PostageCalculator(new BusySeasonCalculator(new ShunFengCalculator()));
+            Assert.AreEqual(6*1.15, calculator.GetPostage(items), 0.001);
+        }
     }
 }
