@@ -54,5 +54,27 @@ namespace visitor_test
             var calculator = new PostageCalculator(new BusySeasonCalculator(new ShunFengCalculator()));
             Assert.AreEqual(6*1.15, calculator.GetPostage(items), 0.001);
         }
+        
+        [TestMethod]
+        public void should_ZT_increase_postage_for_food_by_20_percent_in_busy_seaon()
+        {
+            var items = new List<IPostable>
+                            {
+                                new Food(2)
+                            };
+            var calculator = new PostageCalculator(new BusySeasonCalculator(new ZhongTongCalculator()));
+            Assert.AreEqual(10*1.2, calculator.GetPostage(items), 0.001);
+        }
+        
+        [TestMethod]
+        public void should_SF_increase_postage_for_food_by_20_percent_in_busy_seaon()
+        {
+            var items = new List<IPostable>
+                            {
+                                new Food(2)
+                            };
+            var calculator = new PostageCalculator(new BusySeasonCalculator(new ShunFengCalculator()));
+            Assert.AreEqual(8*1.2, calculator.GetPostage(items), 0.001);
+        }
     }
 }

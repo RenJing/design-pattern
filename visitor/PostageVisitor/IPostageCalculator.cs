@@ -12,6 +12,7 @@ namespace Visitor.PostageVisitor
     public class BusySeasonCalculator : IPostageCalculator
     {
         private const double BOOK_POSTAGE_INCREASE_RATE = 0.15;
+        private const double FOOD_POSTAGE_INCREASE_RATE = 0.2;
         private readonly IPostageCalculator postageCalculator;
 
         public BusySeasonCalculator(IPostageCalculator postageCalculator)
@@ -31,7 +32,7 @@ namespace Visitor.PostageVisitor
 
         public double Visit(Food food)
         {
-            throw new System.NotImplementedException();
+            return postageCalculator.Visit(food) * (1 + FOOD_POSTAGE_INCREASE_RATE);
         }
     }
 }
