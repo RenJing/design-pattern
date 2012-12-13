@@ -5,6 +5,6 @@ namespace Visitor.Item
     public interface IPostable
     {
         double Weight { get; }
-        double Accept(IPostageVisitor visitor);
+        double Accept(IPostageCalculator calculator);
     }
 }

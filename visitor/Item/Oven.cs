@@ -13,9 +13,9 @@ namespace Visitor.Item
             Count = count;
         }
 
-        public double Accept(IPostageVisitor visitor)
+        public double Accept(IPostageCalculator calculator)
         {
-            return visitor.Visit(this);
+            return calculator.Visit(this);
         }
     }
 }

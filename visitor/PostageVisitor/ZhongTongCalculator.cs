@@ -2,7 +2,7 @@
 
 namespace Visitor.PostageVisitor
 {
-    public class ZhongTongPostageVisitor : IPostageVisitor
+    public class ZhongTongCalculator : IPostageCalculator
     {
         private const int MIN_WEIGHT = 5;
         private const int MIN_POSTAGE = 10;

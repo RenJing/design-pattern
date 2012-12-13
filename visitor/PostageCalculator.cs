@@ -7,15 +7,15 @@ namespace Visitor
 {
     public class PostageCalculator
     {
-        private readonly IPostageVisitor visitor;
-        public PostageCalculator(IPostageVisitor visitor)
+        private readonly IPostageCalculator calculator;
+        public PostageCalculator(IPostageCalculator calculator)
         {
-            this.visitor = visitor;
+            this.calculator = calculator;
         }
 
         public double GetPostage(IList<IPostable> items)
         {
-            return items.Sum(i => i.Accept(visitor));
+            return items.Sum(i => i.Accept(calculator));
         }
     }
 }

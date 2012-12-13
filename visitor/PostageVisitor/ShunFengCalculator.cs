@@ -2,7 +2,7 @@
 
 namespace Visitor.PostageVisitor
 {
-    public class ShunFengPostageVisitor : IPostageVisitor
+    public class ShunFengCalculator : IPostageCalculator
     {
         private const int POSTAGE_FOR_ONE_OVEN = 40;
         private const int POSTAGE_FOR_ONE_KILO_BOOK = 3;

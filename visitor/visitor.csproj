@@ -45,10 +45,10 @@
     <Compile Include="Item\Food.cs" />
     <Compile Include="Item\IPostable.cs" />
     <Compile Include="PostageCalculator.cs" />
-    <Compile Include="PostageVisitor\ShunFengPostageVisitor.cs" />
-    <Compile Include="PostageVisitor\IPostageVisitor.cs" />
+    <Compile Include="PostageVisitor\ShunFengCalculator.cs" />
+    <Compile Include="PostageVisitor\IPostageCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PostageVisitor\ZhongTongPostageVisitor.cs" />
+    <Compile Include="PostageVisitor\ZhongTongCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
